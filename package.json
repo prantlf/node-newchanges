@@ -1,6 +1,6 @@
 {
   "name": "newchanges",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates or updates the changelog file from commit messages formatted according to Conventional Commits.",
   "author": {
     "name": "Ferdinand Prantl",

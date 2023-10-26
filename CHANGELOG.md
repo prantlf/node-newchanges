@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/prantlf/node-newchanges/compare/v1.0.0...v1.0.1) (2023-10-26)
+
+
+### Bug Fixes
+
+* Retarget the symlink to the executable on the first run ([7d92ab3](https://github.com/prantlf/node-newchanges/commit/7d92ab3845629966c0cbd1d26a7ea874b337dc31))
+
 # 1.0.0 (2023-10-26)
 
 
