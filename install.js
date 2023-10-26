@@ -16,12 +16,21 @@ const platformSuffixes = {
 }
 
 try {
-  const { INIT_CWD: root } = process.env
-  if (!root) throw new Error('not running during npm install')
+  if (!process.env.INIT_CWD) throw new Error('not running during npm install')
+
+  // installed locally
+  let bin = join(__dirname, '..', 'node_modules', '.bin')
+  // installed globally
+  if (!await exists(bin)) bin = join(__dirname, '..', '..', 'bin')
+  // installed dependencies of this package
+  if (!await exists(bin)) bin = join(__dirname, 'node_modules', '.bin')
+  if (!await exists(bin)) throw new Error('cannot find bin directory')
+
   const { executable, version } = await grab(
     { repository, platformSuffixes, targetDirectory: __dirname, unpackExecutable: true })
   console.log('downloaded and unpacked "%s" version %s', executable, version)
-  const link = join(root, 'node_modules', '.bin', basename(executable))
+
+  const link = join(bin, basename(executable))
   if (await exists(link)) {
     log('unlink "%s"', link)
     await unlink(link)
