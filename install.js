@@ -20,11 +20,18 @@ try {
 
   // installed locally
   let bin = join(__dirname, '..', 'node_modules', '.bin')
+  log('local bin "%s"', bin)
   // installed globally
-  if (!await exists(bin)) bin = join(__dirname, '..', '..', 'bin')
-  // installed dependencies of this package
-  if (!await exists(bin)) bin = join(__dirname, 'node_modules', '.bin')
-  if (!await exists(bin)) throw new Error('cannot find bin directory')
+  if (!await exists(bin)) {
+    bin = join(__dirname, '..', '..', 'bin')
+    log('global bin "%s"', bin)
+    // installed dependencies of this package
+    if (!await exists(bin)) {
+      bin = join(__dirname, 'node_modules', '.bin')
+      log('package bin "%s"', bin)
+    }
+    if (!await exists(bin)) throw new Error('cannot find bin directory')
+  }
 
   const { executable, version } = await grab(
     { repository, platformSuffixes, targetDirectory: __dirname, unpackExecutable: true })
