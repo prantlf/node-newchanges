@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/prantlf/node-newchanges/compare/v1.0.2...v1.0.3) (2023-10-26)
+
+
+### Bug Fixes
+
+* Add debug logging for bin directory lookup ([5b72a5f](https://github.com/prantlf/node-newchanges/commit/5b72a5f3de9eeb3dc8435f0728ead1a06635bdaf))
+
 ## [1.0.2](https://github.com/prantlf/node-newchanges/compare/v1.0.1...v1.0.2) (2023-10-26)
 
 
