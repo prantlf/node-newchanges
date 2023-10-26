@@ -36,7 +36,7 @@ try {
     await unlink(link)
   }
   log('link "%s"', link)
-  await symlink (executable, link, 'junction')
+  await symlink(executable, link, 'junction')
 } catch (err) {
   console.error(err)
   process.exitCode = 1
