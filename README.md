@@ -3,16 +3,16 @@
 [![Latest version](https://img.shields.io/npm/v/newchanges)
  ![Dependency status](https://img.shields.io/librariesio/release/npm/newchanges)
 ](https://www.npmjs.com/package/newchanges)
-[![Coverage](https://codecov.io/gh/prantlf/node-newchanges/branch/master/graph/badge.svg)](https://codecov.io/gh/prantlf/node-newchanges)
 
 Creates or updates the changelog file from commit messages formatted according to [Conventional Commits]. Installs [newchanges] in [Node.js] environments.
 
 ## Installation
 
-This package is usually installed globally, so that you can use the `newchanges` executable:
+This package is usually installed globally, so that you can use the `newchanges` executable from any directory. You can install it during the first usage with `npx` too:
 
 ```sh
 $ npm i -g newchanges
+$ npx newchanges ...
 ```
 
 Make sure, that you use [Node.js] version 18 or newer.
