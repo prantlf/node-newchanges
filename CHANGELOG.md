@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/prantlf/node-newchanges/compare/v1.0.3...v1.0.4) (2023-10-27)
+
+
+### Bug Fixes
+
+* Retarget symlink only on non-windows, rerun exe otherwise ([3fd5d90](https://github.com/prantlf/node-newchanges/commit/3fd5d909eb4d3472a77e21ed4eb835dbf9e8be00))
+
 ## [1.0.3](https://github.com/prantlf/node-newchanges/compare/v1.0.2...v1.0.3) (2023-10-26)
 
 
