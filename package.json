@@ -53,8 +53,8 @@
     ]
   },
   "dependencies": {
-    "debug": "^4.3.4",
-    "grab-github-release": "^0.1.0"
+    "grab-github-release": "^0.1.1",
+    "link-bin-executable": "^0.0.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",

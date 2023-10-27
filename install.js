@@ -1,13 +1,11 @@
-import debug from 'debug'
-import { access, symlink, unlink } from 'fs/promises'
-import { basename, dirname, join } from 'path'
+import { dirname } from 'path'
 import { fileURLToPath } from 'url'
 import grab from 'grab-github-release'
+import { installLink } from 'link-bin-executable'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const exists = file => access(file).then(() => true, () => false)
-const log = debug('newchanges')
 
+const name = 'newchanges'
 const repository = 'prantlf/v-newchanges'
 const platformSuffixes = {
   linux: 'linux',
@@ -16,34 +14,12 @@ const platformSuffixes = {
 }
 
 try {
-  if (!process.env.INIT_CWD) throw new Error('not running during npm install')
-
-  // installed locally
-  let bin = join(__dirname, '..', 'node_modules', '.bin')
-  log('local bin "%s"', bin)
-  // installed globally
-  if (!await exists(bin)) {
-    bin = join(__dirname, '..', '..', 'bin')
-    log('global bin "%s"', bin)
-    // installed dependencies of this package
-    if (!await exists(bin)) {
-      bin = join(__dirname, 'node_modules', '.bin')
-      log('package bin "%s"', bin)
-    }
-    if (!await exists(bin)) throw new Error('cannot find bin directory')
-  }
-
-  const { executable, version } = await grab(
-    { repository, platformSuffixes, targetDirectory: __dirname, unpackExecutable: true })
+  const { executable, version } = await grab({
+    repository, platformSuffixes, targetDirectory: __dirname, unpackExecutable: true
+  })
   console.log('downloaded and unpacked "%s" version %s', executable, version)
 
-  const link = join(bin, basename(executable))
-  if (await exists(link)) {
-    log('unlink "%s"', link)
-    await unlink(link)
-  }
-  log('link "%s"', link)
-  await symlink(executable, link, 'junction')
+  await installLink({ name, packageDirectory: __dirname })
 } catch (err) {
   console.error(err)
   process.exitCode = 1

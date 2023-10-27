@@ -5,12 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  debug:
-    specifier: ^4.3.4
-    version: 4.3.4
   grab-github-release:
-    specifier: ^0.1.0
-    version: 0.1.0
+    specifier: ^0.1.1
+    version: 0.1.1
+  link-bin-executable:
+    specifier: ^0.0.1
+    version: 0.0.1
 
 devDependencies:
   '@semantic-release/changelog':
@@ -967,8 +967,8 @@ packages:
       slash: 4.0.0
     dev: true
 
-  /grab-github-release@0.1.0:
-    resolution: {integrity: sha512-W2/iAbuSQ0V2mQ1VdvW50x3iQV9A7AsfP8rTnkuTY8g391B8kXaixPBJQ/jrdoYCe87U4r5uR+vYg9/E6iICMg==}
+  /grab-github-release@0.1.1:
+    resolution: {integrity: sha512-6f0emkVLj6dYyVPVm/HkJx3I6RECRy8dxLbMG7HMyK79oscVMizO7/47gHjdEre9iJ20kYqi7pDEb3YsERwKvg==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
@@ -1240,6 +1240,15 @@ packages:
     resolution: {integrity: sha512-cNOjgCnLB+FnvWWtyRTzmB3POJ+cXxTA81LoW7u8JdmhfXzriropYwpjShnz1QLLWsQwY7nIxoDmcPTwphDK9w==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
+
+  /link-bin-executable@0.0.1:
+    resolution: {integrity: sha512-k1my+bkJXw4wFBgPV1/9OEdsInyZRHlcx49sDDzpSjiweOIn19BWNnwXSnjH8/zDlmUy3quH0HuN42nnNilCMg==}
+    engines: {node: '>=18'}
+    dependencies:
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   /load-json-file@4.0.0:
     resolution: {integrity: sha512-Kx8hMakjX03tiGTLAIdJ+lL0htKnXjEZN6hk/tozf/WOuYGdZBJrZ+rCJRbVCugsjB3jMLn9746NsQIf5VjBMw==}
