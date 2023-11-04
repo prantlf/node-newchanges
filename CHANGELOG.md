@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/prantlf/node-newchanges/compare/v1.0.5...v1.0.6) (2023-11-04)
+
+
+### Bug Fixes
+
+* Upgrade link-bin-executable ([fd0151c](https://github.com/prantlf/node-newchanges/commit/fd0151c32a1ace83f552ab6568266b53a6fe83fb))
+
 ## [1.0.5](https://github.com/prantlf/node-newchanges/compare/v1.0.4...v1.0.5) (2023-10-27)
 
 
