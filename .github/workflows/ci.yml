@@ -29,6 +29,10 @@ jobs:
         cache: 'pnpm'
     - name: Install Dependencies
       run: pnpm i --frozen-lockfile --no-verify-store-integrity
+    - name: Test
+      run: |
+        node_modules/.bin/newchanges -V
+        node_modules/.bin/newchanges -V
 
   windows:
     runs-on: windows-latest
@@ -46,6 +50,18 @@ jobs:
         cache: 'pnpm'
     - name: Install Dependencies
       run: pnpm i --frozen-lockfile --no-verify-store-integrity
+      env:
+        DEBUG: '*'
+    - name: Test CMD
+      shell: cmd
+      run: |
+        node_modules\.bin\newchanges -V
+        node_modules\.bin\newchanges -V
+    - name: Test PowerShell
+      shell: pwsh
+      run: |
+        .\node_modules\.bin\newchanges -V
+        .\node_modules\.bin\newchanges -V
 
   linux-and-release:
     needs:
@@ -66,7 +82,11 @@ jobs:
         cache: 'pnpm'
         registry-url: 'https://registry.npmjs.org'
     - name: Install Dependencies
-      run: 'DEBUG=* pnpm i --frozen-lockfile --no-verify-store-integrity'
+      run: pnpm i --frozen-lockfile --no-verify-store-integrity
+    - name: Test
+      run: |
+        node_modules/.bin/newchanges -V
+        node_modules/.bin/newchanges -V
     - name: Publish
       if: ${{ github.ref_name == 'master' }}
       uses: cycjimmy/semantic-release-action@v4

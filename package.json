@@ -53,13 +53,13 @@
     ]
   },
   "dependencies": {
-    "grab-github-release": "^0.1.1",
-    "link-bin-executable": "^0.3.1"
+    "grab-github-release": "^0.2.0",
+    "link-bin-executable": "^1.0.2"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/git": "10.0.1",
-    "denolint": "2.0.14"
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "denolint": "^2.0.14"
   },
   "keywords": [
     "changes",

@@ -6,21 +6,21 @@ settings:
 
 dependencies:
   grab-github-release:
-    specifier: ^0.1.1
-    version: 0.1.1
+    specifier: ^0.2.0
+    version: 0.2.0
   link-bin-executable:
-    specifier: ^0.3.1
-    version: 0.3.1
+    specifier: ^1.0.2
+    version: 1.0.2
 
 devDependencies:
   '@semantic-release/changelog':
-    specifier: 6.0.3
+    specifier: ^6.0.3
     version: 6.0.3(semantic-release@22.0.5)
   '@semantic-release/git':
-    specifier: 10.0.1
+    specifier: ^10.0.1
     version: 10.0.1(semantic-release@22.0.5)
   denolint:
-    specifier: 2.0.14
+    specifier: ^2.0.14
     version: 2.0.14
 
 packages:
@@ -967,8 +967,8 @@ packages:
       slash: 4.0.0
     dev: true
 
-  /grab-github-release@0.1.1:
-    resolution: {integrity: sha512-6f0emkVLj6dYyVPVm/HkJx3I6RECRy8dxLbMG7HMyK79oscVMizO7/47gHjdEre9iJ20kYqi7pDEb3YsERwKvg==}
+  /grab-github-release@0.2.0:
+    resolution: {integrity: sha512-8aliL12TGYz7ylaTzW977sayRaAztGCP6VAHyPMvYUbsHiOlmu4ZG4f6x+C7PGeVGLCne9QSMwAi0zbfV2gQkQ==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
@@ -1241,8 +1241,8 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
 
-  /link-bin-executable@0.3.1:
-    resolution: {integrity: sha512-gqkTCU+xSXYcI73QlLi+7n4S2mseobhHDLRwIjqS160OaPflr7FPdO7w+z7XXSIZlqSSkz6sjboakWKZxiqdHQ==}
+  /link-bin-executable@1.0.2:
+    resolution: {integrity: sha512-kbTwEUt4pSnWef8NWFPAWrYTggRIrEv50+Pz8aLhQUH1XR+ydruNrney3ue5w02iPRMpmHRuMFBmsDiOGj94fw==}
     engines: {node: '>=18'}
     dependencies:
       debug: 4.3.4
