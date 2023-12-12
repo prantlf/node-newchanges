@@ -1,3 +1,17 @@
+# [2.0.0](https://github.com/prantlf/node-newchanges/compare/v1.0.6...v2.0.0) (2023-12-12)
+
+
+### Bug Fixes
+
+* Upgrade dependencies ([56710cf](https://github.com/prantlf/node-newchanges/commit/56710cf1fecb0b8bd4b02be898673f02796d8ad5))
+
+
+### BREAKING CHANGES
+
+* Instead of symlinks, wrappers .cmd and .ps1
+are created in .bin on Windows. Although it should not affect
+any scenario, it is a change in the file names nevertheless.
+
 ## [1.0.6](https://github.com/prantlf/node-newchanges/compare/v1.0.5...v1.0.6) (2023-11-04)
 
 
