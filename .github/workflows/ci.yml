@@ -29,10 +29,14 @@ jobs:
         cache: 'pnpm'
     - name: Install Dependencies
       run: pnpm i --frozen-lockfile --no-verify-store-integrity
+      env:
+        DEBUG: linkbe,grabghr
     - name: Test
       run: |
         node_modules/.bin/newchanges -V
         node_modules/.bin/newchanges -V
+      env:
+        DEBUG: linkbe,grabghr
 
   windows:
     runs-on: windows-latest
@@ -51,17 +55,21 @@ jobs:
     - name: Install Dependencies
       run: pnpm i --frozen-lockfile --no-verify-store-integrity
       env:
-        DEBUG: '*'
+        DEBUG: linkbe,grabghr
     - name: Test CMD
       shell: cmd
       run: |
         node_modules\.bin\newchanges -V
         node_modules\.bin\newchanges -V
+      env:
+        DEBUG: linkbe,grabghr
     - name: Test PowerShell
       shell: pwsh
       run: |
         .\node_modules\.bin\newchanges -V
         .\node_modules\.bin\newchanges -V
+      env:
+        DEBUG: linkbe,grabghr
 
   linux-and-release:
     needs:
@@ -83,10 +91,14 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - name: Install Dependencies
       run: pnpm i --frozen-lockfile --no-verify-store-integrity
+      env:
+        DEBUG: linkbe,grabghr
     - name: Test
       run: |
         node_modules/.bin/newchanges -V
         node_modules/.bin/newchanges -V
+      env:
+        DEBUG: linkbe,grabghr
     - name: Publish
       if: ${{ github.ref_name == 'master' }}
       uses: cycjimmy/semantic-release-action@v4
