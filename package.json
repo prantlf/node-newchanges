@@ -34,7 +34,7 @@
     "install.js"
   ],
   "scripts": {
-    "postinstall": "node install",
+    "postinstall": "node install.js",
     "test": "denolint"
   },
   "release": {
