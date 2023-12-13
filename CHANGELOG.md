@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/prantlf/node-newchanges/compare/v2.0.0...v2.0.1) (2023-12-13)
+
+
+### Bug Fixes
+
+* Run postinstall with the.js file extension ([6617dde](https://github.com/prantlf/node-newchanges/commit/6617dde856e1cb512c1107b25d93224efd9994fd))
+* Upgrade dependencies ([be22d9e](https://github.com/prantlf/node-newchanges/commit/be22d9eb10349d08a7e22cc6572d826c1404aec6))
+
 # [2.0.0](https://github.com/prantlf/node-newchanges/compare/v1.0.6...v2.0.0) (2023-12-12)
 
 
