@@ -1,3 +1,9 @@
+## [2.0.2](https://github.com/prantlf/node-newchanges/compare/v2.0.1...v2.0.2) (2023-12-14)
+
+### Bug Fixes
+
+* Replace semantic-release with publish-release ([19da8fb](https://github.com/prantlf/node-newchanges/commit/19da8fbf6a175d63ea3dfb67a28bc34e5a8da0bf))
+
 ## [2.0.1](https://github.com/prantlf/node-newchanges/compare/v2.0.0...v2.0.1) (2023-12-13)
 
 
