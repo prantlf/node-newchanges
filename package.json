@@ -35,31 +35,14 @@
   ],
   "scripts": {
     "postinstall": "node install.js",
-    "test": "denolint"
-  },
-  "release": {
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      [
-        "@semantic-release/github",
-        {
-          "failComment": false
-        }
-      ],
-      "@semantic-release/git"
-    ]
+    "test": "oxlint"
   },
   "dependencies": {
     "grab-github-release": "^0.2.3",
     "link-bin-executable": "^1.0.2"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "denolint": "^2.0.14"
+    "oxlint": "^0.0.20"
   },
   "keywords": [
     "changes",
