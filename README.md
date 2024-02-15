@@ -67,5 +67,5 @@ Copyright (c) 2023 Ferdinand Prantl
 Licensed under the MIT license.
 
 [Conventional Commits]: https://www.conventionalcommits.org/
-[newchanges]: https://github.com/prantlf/node-newchanges
+[newchanges]: https://github.com/prantlf/v-newchanges
 [Node.js]: http://nodejs.org/
