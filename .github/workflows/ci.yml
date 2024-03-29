@@ -13,8 +13,8 @@ on:
 
 jobs:
 
-  macos:
-    runs-on: macos-latest
+  linux:
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout Sources
       uses: actions/checkout@v4
@@ -27,6 +27,7 @@ jobs:
       with:
         node-version: 'lts/*'
         cache: 'pnpm'
+        registry-url: 'https://registry.npmjs.org'
     - name: Install Dependencies
       run: pnpm i --frozen-lockfile --no-verify-store-integrity
       env:
@@ -73,11 +74,11 @@ jobs:
       env:
         DEBUG: linkbe,grabghr
 
-  linux-and-release:
+  macos-and-release:
     needs:
-      - macos
+      - linux
       - windows
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
     - name: Checkout Sources
       uses: actions/checkout@v4
@@ -90,7 +91,6 @@ jobs:
       with:
         node-version: 'lts/*'
         cache: 'pnpm'
-        registry-url: 'https://registry.npmjs.org'
     - name: Install Dependencies
       run: pnpm i --frozen-lockfile --no-verify-store-integrity
       env:
