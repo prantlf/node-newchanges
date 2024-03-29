@@ -42,7 +42,7 @@
     "link-bin-executable": "^1.0.2"
   },
   "devDependencies": {
-    "oxlint": "^0.0.20"
+    "oxlint": "^0.2.14"
   },
   "keywords": [
     "changes",
