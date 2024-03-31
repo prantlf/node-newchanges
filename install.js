@@ -1,6 +1,6 @@
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
-import grab from 'grab-github-release'
+import { grab } from 'grab-github-release'
 import { installLink } from 'link-bin-executable'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
