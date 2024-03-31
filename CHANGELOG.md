@@ -1,5 +1,11 @@
 # Changes
 
+## [2.0.3](https://github.com/prantlf/node-newchanges/compare/v2.0.2...v2.0.3) (2024-03-31)
+
+### Bug Fixes
+
+* Upgrade dependencies to use download cache ([a420e3b](https://github.com/prantlf/node-newchanges/commit/a420e3bcc5cae54372ac524d9edcda0b8d0328cd))
+
 ## [2.0.2](https://github.com/prantlf/node-newchanges/compare/v2.0.1...v2.0.2) (2023-12-14)
 
 ### Bug Fixes
