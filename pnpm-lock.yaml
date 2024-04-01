@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   grab-github-release:
-    specifier: ^1.0.0
-    version: 1.0.0
+    specifier: ^2.0.0
+    version: 2.0.0
   link-bin-executable:
     specifier: ^1.0.2
     version: 1.0.2
@@ -99,8 +99,8 @@ packages:
       ms: 2.1.2
     dev: false
 
-  /grab-github-release@1.0.0:
-    resolution: {integrity: sha512-M7KEeUyKJpNwxhvfCxG8ezgWbng6RcI/km3CvVFteqymliF2lY9yAipqRfOdwxRkJ8oC3kbnPXx0IhIG64+kaw==}
+  /grab-github-release@2.0.0:
+    resolution: {integrity: sha512-pNMjUyJ6IuRFNNrBX6k6Wa6Zi+1kVX6HcsVFTdYw8GvzFxCGwTsBz6qo0d/cLIlum/A7oMy3oVdtiO3e/wVSqA==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
