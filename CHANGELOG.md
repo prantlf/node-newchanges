@@ -1,5 +1,11 @@
 # Changes
 
+## [2.0.4](https://github.com/prantlf/node-newchanges/compare/v2.0.3...v2.0.4) (2024-04-01)
+
+### Bug Fixes
+
+* Upgrade dependencies to rename cache directory ([08853c5](https://github.com/prantlf/node-newchanges/commit/08853c5bf406158f9115df4e4e32bc328223f88e))
+
 ## [2.0.3](https://github.com/prantlf/node-newchanges/compare/v2.0.2...v2.0.3) (2024-03-31)
 
 ### Bug Fixes
